@@ -2,5 +2,53 @@
     --font-title: "Crimson Pro", serif;
     --font-paragrafe: "Lato", sans-serif;
     --bakground: #D9CDF7;
-    
+    --borderColor: #271A45;
+}
+.container{
+    background-color: var(--bakground);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Images{
+    position: relative;
+    width:875px;
+}
+.deg{
+ position:absolute;
+ left: 366px;
+}
+.details{
+ position: relative;
+ right: 281px;
+ display: flex;
+ flex-direction: column;
+ gap: 12px;
+}
+
+button{
+    width: 168px;
+    height: 32px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid var(--borderColor);
+    cursor: pointer;
+    font-family: var(--font-paragrafe);
+}
+.codigo, .preco{
+    color: var(--borderColor);
+    font-family: var(--font-paragrafe);
+    font-weight:300;
+}
+.codigo{
+    font-size: 10px;
+}
+.preco{
+    font-size: 16px;
+   
+}
+h1{
+    font-family: var(--font-title);
 }
