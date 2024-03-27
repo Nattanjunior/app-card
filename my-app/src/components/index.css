@@ -1,23 +1,25 @@
 :root{
-    --font-title: "Crimson Pro", serif;
-    --font-paragrafe: "Lato", sans-serif;
-    --bakground: #D9CDF7;
-    --borderColor: #271A45;
+ --font-title: "Crimson Pro", serif;
+ --font-paragrafe: "Lato", sans-serif;
+ --bakground: #D9CDF7;
+ --borderColor: #271A45;
 }
 .container{
-    background-color: var(--bakground);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+ background-color: var(--bakground);
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 .Images{
-    position: relative;
-    width:875px;
+ position: relative;
+ width:835px;
+ animation: rotate 3s forwards;
 }
 .deg{
  position:absolute;
  left: 366px;
+ cursor: pointer;
 }
 .details{
  position: relative;
@@ -25,30 +27,56 @@
  display: flex;
  flex-direction: column;
  gap: 12px;
+ animation: details 3s ease-in-out;
 }
-
 button{
-    width: 168px;
-    height: 32px;
-    padding: 8px 16px;
-    border-radius: 20px;
-    background-color: transparent;
-    border: 1px solid var(--borderColor);
-    cursor: pointer;
-    font-family: var(--font-paragrafe);
+ width: 168px;
+ height: 32px;
+ padding: 8px 16px;
+ border-radius: 20px;
+ background-color: transparent;
+ border: 1px solid var(--borderColor);
+ cursor: pointer;
+ font-family: var(--font-paragrafe);
+ transition: all 1s ease-in-out;
 }
 .codigo, .preco{
-    color: var(--borderColor);
-    font-family: var(--font-paragrafe);
-    font-weight:300;
+ color: var(--borderColor);
+ font-family: var(--font-paragrafe);
+ font-weight:300;
 }
 .codigo{
-    font-size: 10px;
+ font-size: 10px;
 }
 .preco{
-    font-size: 16px;
-   
+ font-size: 16px;
 }
 h1{
-    font-family: var(--font-title);
+ font-family: var(--font-title);
+}
+button:hover{
+ color: #ffff;
+ background-color: var(--borderColor);
+}
+@keyframes rotate{
+ 0%{
+    left:-200px;
+    opacity: 0;
+}
+100%{
+    left: 0;
+    opacity: 1;
+}
+}
+@keyframes details{
+0%{
+    top: -200px;
+    opacity: 0;
+    transform: rotateX(-200deg);
+}
+100%{
+    top: 0;
+    opacity: 1;
+    transform: rotateX(0deg);
+}
 }
